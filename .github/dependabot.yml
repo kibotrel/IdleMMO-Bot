@@ -5,6 +5,4 @@ updates:
     schedule:
       interval: 'weekly'
     labels:
-      - 'Priority: Low 🥉'
-      - 'Size: Small ☀️ '
       - 'Type: Dependency update 📦'
