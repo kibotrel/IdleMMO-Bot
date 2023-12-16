@@ -1,10 +1,9 @@
 ---
-name: "✨ New feature"
+name: '✨ New feature'
 about: Suggest an idea for this project
 title: ''
-labels: 'Need: Triage :monocle_face:, Type: New feature :sparkles:'
+labels: 'Need: Triage :monocle_face:'
 assignees: kibotrel
-
 ---
 
 ## :book: Description

@@ -2,9 +2,8 @@
 name: "\U0001F914 Questions"
 about: Ask a question or request help
 title: ''
-labels: 'Need: Triage :monocle_face:, Type: Question :grey_question:'
+labels: 'Need: Triage :monocle_face:'
 assignees: kibotrel
-
 ---
 
 ## :book: Description

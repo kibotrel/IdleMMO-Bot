@@ -2,9 +2,8 @@
 name: "\U0001F41B Bug report"
 about: Create a report to help us improve
 title: ''
-labels: 'Need: Triage :monocle_face:, Type: Bug :bug:'
+labels: 'Need: Triage :monocle_face:'
 assignees: kibotrel
-
 ---
 
 ## :book: Description
