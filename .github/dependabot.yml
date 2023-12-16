@@ -6,3 +6,5 @@ updates:
       interval: 'weekly'
     labels:
       - 'Type: Dependency update 📦'
+    reviewers:
+      - 'kibotrel'
