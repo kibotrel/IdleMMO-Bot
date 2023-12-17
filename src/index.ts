@@ -1,5 +1,6 @@
-const logMessage = (message: string) => {
-  console.log(message)
-}
+import { bot } from './config/dependencies.js'
+import { interactions } from './interactions/index.js'
 
-logMessage('Hello World!')
+bot.addGenericInteractions(interactions)
+
+await bot.start()
