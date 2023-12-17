@@ -32,7 +32,7 @@
     "vitest": "1.0.4"
   },
   "engines": {
-    "node": "20.10.0",
+    "node": "18.16.1",
     "pnpm": ">=7"
   },
   "files": [
@@ -41,7 +41,7 @@
   "homepage": "",
   "license": "MIT",
   "keywords": [],
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "name": "placeholder",
   "repository": {
     "type": "git",
@@ -60,6 +60,6 @@
     "version": "pm-exec run format && git add -A src"
   },
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "version": "0.0.1"
 }
