@@ -6,8 +6,7 @@ export const ping: InteractionHandler = {
     .setName('ping')
     .setDescription('sends Pong!'),
 
-  callback: async (interaction, metadata) => {
-    console.log(metadata)
+  callback: async (interaction) => {
     await interaction.reply({ content: 'Pong!', ephemeral: true })
   },
 }
