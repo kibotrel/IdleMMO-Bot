@@ -9,8 +9,8 @@ dependencies:
     specifier: 14.14.1
     version: 14.14.1
   discordbox:
-    specifier: 1.0.4
-    version: 1.0.4
+    specifier: 1.0.6
+    version: 1.0.6
   dotenv:
     specifier: 16.3.1
     version: 16.3.1
@@ -1733,13 +1733,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /discordbox@1.0.4:
-    resolution: {integrity: sha512-qtGUOVgEpmr/ezsBIutadFdWhpg0UbpqCUA3ph8rhzKTzK1ikBI0bGXOjzaoXJmd/xQiLuZYbgQ9Y0pMv4OdQQ==}
+  /discordbox@1.0.6:
+    resolution: {integrity: sha512-Yl9bYLffHSE6tRY4O/Xg83lQu7Dg1EsTIoEn5IoP07X+tR/EbsSdKY/9/uxZTK9PtHkS0RXO7wC4rd3QoD7DOA==}
     engines: {node: 18.16.1, pnpm: '>=7'}
     dependencies:
       chalk: 5.3.0
       discord.js: 14.14.1
-      dotenv: 16.3.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
