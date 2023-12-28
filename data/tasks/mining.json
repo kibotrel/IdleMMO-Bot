@@ -155,16 +155,16 @@
   {
     "name": "mystic_ore",
     "label": "Mystic Ore",
-    "minimumLevel": 80,
+    "minimumLevel": 90,
     "emoji": "<:mystic_ore:1189890121949003786>",
-    "timeToComplete": 0,
+    "timeToComplete": 45000,
     "rewards": {
-      "skillExperience": 0,
+      "skillExperience": 55,
       "vendorGold": 15,
       "statisticExperiences": [
         {
-          "strength": 0,
-          "defense": 0
+          "strength": 7,
+          "defense": 16
         }
       ]
     }
