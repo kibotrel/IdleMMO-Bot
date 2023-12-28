@@ -3,11 +3,11 @@
     "name": "coal_ore",
     "label": "Coal Ore",
     "minimumLevel": 1,
-    "emoji": "",
+    "emoji": "<:coal_ore:1189890107730317312>",
     "timeToComplete": 8000,
     "rewards": {
       "skillExperience": 3,
-      "vendorGold": 0,
+      "vendorGold": 1,
       "statisticExperiences": [
         {
           "strength": 1,
@@ -20,11 +20,11 @@
     "name": "tin_ore",
     "label": "Tin Ore",
     "minimumLevel": 1,
-    "emoji": "",
+    "emoji": "<:tin_ore:1189890124297809981>",
     "timeToComplete": 8000,
     "rewards": {
       "skillExperience": 3,
-      "vendorGold": 0,
+      "vendorGold": 1,
       "statisticExperiences": [
         {
           "strength": 1,
@@ -37,11 +37,11 @@
     "name": "copper_ore",
     "label": "Copper Ore",
     "minimumLevel": 5,
-    "emoji": "",
+    "emoji": "<:copper_ore:1189890109605150761>",
     "timeToComplete": 12000,
     "rewards": {
       "skillExperience": 5,
-      "vendorGold": 0,
+      "vendorGold": 2,
       "statisticExperiences": [
         {
           "strength": 1,
@@ -54,11 +54,11 @@
     "name": "iron_ore",
     "label": "Iron Ore",
     "minimumLevel": 10,
-    "emoji": "",
+    "emoji": "<:iron_ore:1189890114948714517>",
     "timeToComplete": 15000,
     "rewards": {
       "skillExperience": 10,
-      "vendorGold": 0,
+      "vendorGold": 3,
       "statisticExperiences": [
         {
           "strength": 2,
@@ -71,11 +71,11 @@
     "name": "lead_ore",
     "label": "Lead Ore",
     "minimumLevel": 15,
-    "emoji": "",
+    "emoji": "<:lead_ore:1189890116882288680>",
     "timeToComplete": 20000,
     "rewards": {
       "skillExperience": 15,
-      "vendorGold": 0,
+      "vendorGold": 5,
       "statisticExperiences": [
         {
           "strength": 3,
@@ -88,11 +88,11 @@
     "name": "steel_ore",
     "label": "Steel Ore",
     "minimumLevel": 25,
-    "emoji": "",
+    "emoji": "<:steel_ore:1189890123257614366>",
     "timeToComplete": 25000,
     "rewards": {
       "skillExperience": 21,
-      "vendorGold": 0,
+      "vendorGold": 7,
       "statisticExperiences": [
         {
           "strength": 3,
@@ -105,11 +105,11 @@
     "name": "mercury_ore",
     "label": "Mercury Ore",
     "minimumLevel": 40,
-    "emoji": "",
+    "emoji": "<:mercury_ore:1189890119776354345>",
     "timeToComplete": 31000,
     "rewards": {
       "skillExperience": 27,
-      "vendorGold": 0,
+      "vendorGold": 9,
       "statisticExperiences": [
         {
           "strength": 4,
@@ -122,11 +122,11 @@
     "name": "chromite_ore",
     "label": "Chromite Ore",
     "minimumLevel": 60,
-    "emoji": "",
+    "emoji": "<:chromite_ore:1189890106690109491>",
     "timeToComplete": 36000,
     "rewards": {
       "skillExperience": 35,
-      "vendorGold": 0,
+      "vendorGold": 11,
       "statisticExperiences": [
         {
           "strength": 5,
@@ -139,11 +139,11 @@
     "name": "uranium_ore",
     "label": "Uranium Ore",
     "minimumLevel": 70,
-    "emoji": "",
+    "emoji": "<:uranium_ore:1189890126957006949>",
     "timeToComplete": 40000,
     "rewards": {
       "skillExperience": 40,
-      "vendorGold": 0,
+      "vendorGold": 13,
       "statisticExperiences": [
         {
           "strength": 6,
@@ -156,7 +156,7 @@
     "name": "mystic_ore",
     "label": "Mystic Ore",
     "minimumLevel": 80,
-    "emoji": "",
+    "emoji": "<:mystic_ore:1189890121949003786>",
     "timeToComplete": 0,
     "rewards": {
       "skillExperience": 0,
