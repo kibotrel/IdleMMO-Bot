@@ -37,7 +37,7 @@
     "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "exclude": ["**/node_modules/**", "**/*/lib", "**/*/dist"],
-  "include": ["src/**/*", "vitest.config.ts"],
+  "include": ["src/**/*", "vitest.config.ts", "package.json", "data/**/*.json"],
   "ts-node": {
     "esm": true
   }
