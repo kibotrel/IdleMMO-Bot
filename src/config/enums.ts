@@ -6,6 +6,13 @@ export const enum ActionNames {
   SkillCalculator = 'skill_calculator',
 }
 
+export const enum ErrorMessages {
+  LevelInformationNotFound = 'Level information could not be found.',
+  SkillCalulatorIncoherentLevels = 'Target level must be higher than the base level.',
+  SkillCalculatorSkillNotYetImplemented = 'Skill is not yet implemented.',
+  SlashCommandArgumentsMalformed = 'Slash command arguments are malformed.',
+}
+
 export const enum OptionDescriptions {
   BarteringLevel = 'Check the vendor menu to get it. Influences the gold/hour ratio.',
   BaseLevel = 'Level you are starting from.',
@@ -52,4 +59,11 @@ export const enum ToolReductions {
   ThirtyFivePercent = 0.35,
   FourtyPercent = 0.4,
   FiftyPercent = 0.5,
+}
+
+export const enum Constants {
+  BarteringRatePerLevel = 0.003,
+  MembershipExperienceBonusRate = 0.15,
+  MembershipTimeRedictionRate = 0.1,
+  MillisecondsInHour = 3_600_000,
 }
