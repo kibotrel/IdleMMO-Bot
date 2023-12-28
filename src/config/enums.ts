@@ -14,7 +14,7 @@ export const enum ErrorMessages {
 }
 
 export const enum OptionDescriptions {
-  BarteringLevel = 'Check the vendor menu to get it. Influences the gold/hour ratio.',
+  BarteringLevel = "Level you're currently at in bartering.",
   BaseLevel = 'Level you are starting from.',
   IsMembershipActive = 'Whether or not you have an active membership.',
   SkillName = 'Skill you want compute for',
