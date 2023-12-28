@@ -1,0 +1,146 @@
+[
+  {
+    "name": "oak_log",
+    "label": "Oak Log",
+    "minimumLevel": 1,
+    "emoji": "",
+    "timeToComplete": 8000,
+    "rewards": {
+      "skillExperience": 3,
+      "vendorGold": 1,
+      "statisticExperiences": [
+        {
+          "strength": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "yew_log",
+    "label": "Yew Log",
+    "minimumLevel": 5,
+    "emoji": "",
+    "timeToComplete": 12000,
+    "rewards": {
+      "skillExperience": 5,
+      "vendorGold": 2,
+      "statisticExperiences": [
+        {
+          "strength": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "spruce_log",
+    "label": "Spruce Log",
+    "minimumLevel": 10,
+    "emoji": "",
+    "timeToComplete": 15000,
+    "rewards": {
+      "skillExperience": 10,
+      "vendorGold": 3,
+      "statisticExperiences": [
+        {
+          "strength": 3
+        }
+      ]
+    }
+  },
+  {
+    "name": "birch_log",
+    "label": "Birch Log",
+    "minimumLevel": 15,
+    "emoji": "",
+    "timeToComplete": 20000,
+    "rewards": {
+      "skillExperience": 15,
+      "vendorGold": 5,
+      "statisticExperiences": [
+        {
+          "strength": 5
+        }
+      ]
+    }
+  },
+  {
+    "name": "banyan_log",
+    "label": "Banyan Log",
+    "minimumLevel": 25,
+    "emoji": "",
+    "timeToComplete": 25000,
+    "rewards": {
+      "skillExperience": 21,
+      "vendorGold": 7,
+      "statisticExperiences": [
+        {
+          "strength": 7
+        }
+      ]
+    }
+  },
+  {
+    "name": "maple_log",
+    "label": "Maple Log",
+    "minimumLevel": 40,
+    "emoji": "",
+    "timeToComplete": 31000,
+    "rewards": {
+      "skillExperience": 27,
+      "vendorGold": 9,
+      "statisticExperiences": [
+        {
+          "strength": 9
+        }
+      ]
+    }
+  },
+  {
+    "name": "willow_log",
+    "label": "Willow Log",
+    "minimumLevel": 60,
+    "emoji": "",
+    "timeToComplete": 36000,
+    "rewards": {
+      "skillExperience": 35,
+      "vendorGold": 11,
+      "statisticExperiences": [
+        {
+          "strength": 11
+        }
+      ]
+    }
+  },
+  {
+    "name": "mahogany_log",
+    "label": "Mahogany Log",
+    "minimumLevel": 70,
+    "emoji": "",
+    "timeToComplete": 40000,
+    "rewards": {
+      "skillExperience": 40,
+      "vendorGold": 13,
+      "statisticExperiences": [
+        {
+          "strength": 13
+        }
+      ]
+    }
+  },
+  {
+    "name": "mystical_log",
+    "label": "Mystical Log",
+    "minimumLevel": 90,
+    "emoji": "",
+    "timeToComplete": 45000,
+    "rewards": {
+      "skillExperience": 55,
+      "vendorGold": 15,
+      "statisticExperiences": [
+        {
+          "strength": 16
+        }
+      ]
+    }
+  }
+]

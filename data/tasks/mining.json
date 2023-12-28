@@ -1,0 +1,172 @@
+[
+  {
+    "name": "coal_ore",
+    "label": "Coal Ore",
+    "minimumLevel": 1,
+    "emoji": "",
+    "timeToComplete": 8000,
+    "rewards": {
+      "skillExperience": 3,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 1,
+          "defense": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "tin_ore",
+    "label": "Tin Ore",
+    "minimumLevel": 1,
+    "emoji": "",
+    "timeToComplete": 8000,
+    "rewards": {
+      "skillExperience": 3,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 1,
+          "defense": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "copper_ore",
+    "label": "Copper Ore",
+    "minimumLevel": 5,
+    "emoji": "",
+    "timeToComplete": 12000,
+    "rewards": {
+      "skillExperience": 5,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 1,
+          "defense": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "iron_ore",
+    "label": "Iron Ore",
+    "minimumLevel": 10,
+    "emoji": "",
+    "timeToComplete": 15000,
+    "rewards": {
+      "skillExperience": 10,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 2,
+          "defense": 3
+        }
+      ]
+    }
+  },
+  {
+    "name": "lead_ore",
+    "label": "Lead Ore",
+    "minimumLevel": 15,
+    "emoji": "",
+    "timeToComplete": 20000,
+    "rewards": {
+      "skillExperience": 15,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 3,
+          "defense": 5
+        }
+      ]
+    }
+  },
+  {
+    "name": "steel_ore",
+    "label": "Steel Ore",
+    "minimumLevel": 25,
+    "emoji": "",
+    "timeToComplete": 25000,
+    "rewards": {
+      "skillExperience": 21,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 3,
+          "defense": 7
+        }
+      ]
+    }
+  },
+  {
+    "name": "mercury_ore",
+    "label": "Mercury Ore",
+    "minimumLevel": 40,
+    "emoji": "",
+    "timeToComplete": 31000,
+    "rewards": {
+      "skillExperience": 27,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 4,
+          "defense": 9
+        }
+      ]
+    }
+  },
+  {
+    "name": "chromite_ore",
+    "label": "Chromite Ore",
+    "minimumLevel": 60,
+    "emoji": "",
+    "timeToComplete": 36000,
+    "rewards": {
+      "skillExperience": 35,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 5,
+          "defense": 11
+        }
+      ]
+    }
+  },
+  {
+    "name": "uranium_ore",
+    "label": "Uranium Ore",
+    "minimumLevel": 70,
+    "emoji": "",
+    "timeToComplete": 40000,
+    "rewards": {
+      "skillExperience": 40,
+      "vendorGold": 0,
+      "statisticExperiences": [
+        {
+          "strength": 6,
+          "defense": 13
+        }
+      ]
+    }
+  },
+  {
+    "name": "mystic_ore",
+    "label": "Mystic Ore",
+    "minimumLevel": 80,
+    "emoji": "",
+    "timeToComplete": 0,
+    "rewards": {
+      "skillExperience": 0,
+      "vendorGold": 15,
+      "statisticExperiences": [
+        {
+          "strength": 0,
+          "defense": 0
+        }
+      ]
+    }
+  }
+]
