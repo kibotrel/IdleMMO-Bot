@@ -3,7 +3,7 @@
     "name": "oak_log",
     "label": "Oak Log",
     "minimumLevel": 1,
-    "emoji": "",
+    "emoji": "<:oak_log:1189893788542455888>",
     "timeToComplete": 8000,
     "rewards": {
       "skillExperience": 3,
@@ -19,7 +19,7 @@
     "name": "yew_log",
     "label": "Yew Log",
     "minimumLevel": 5,
-    "emoji": "",
+    "emoji": "<:yew_log:1189893792665448459>",
     "timeToComplete": 12000,
     "rewards": {
       "skillExperience": 5,
@@ -35,7 +35,7 @@
     "name": "spruce_log",
     "label": "Spruce Log",
     "minimumLevel": 10,
-    "emoji": "",
+    "emoji": "<:spruce_log:1189893790236950578>",
     "timeToComplete": 15000,
     "rewards": {
       "skillExperience": 10,
@@ -51,7 +51,7 @@
     "name": "birch_log",
     "label": "Birch Log",
     "minimumLevel": 15,
-    "emoji": "",
+    "emoji": "<:birch_log:1189893780501962802>",
     "timeToComplete": 20000,
     "rewards": {
       "skillExperience": 15,
@@ -67,7 +67,7 @@
     "name": "banyan_log",
     "label": "Banyan Log",
     "minimumLevel": 25,
-    "emoji": "",
+    "emoji": "<:banyan_log:1189893779226902608>",
     "timeToComplete": 25000,
     "rewards": {
       "skillExperience": 21,
@@ -83,7 +83,7 @@
     "name": "maple_log",
     "label": "Maple Log",
     "minimumLevel": 40,
-    "emoji": "",
+    "emoji": "<:maple_log:1189893785228947557>",
     "timeToComplete": 31000,
     "rewards": {
       "skillExperience": 27,
@@ -99,7 +99,7 @@
     "name": "willow_log",
     "label": "Willow Log",
     "minimumLevel": 60,
-    "emoji": "",
+    "emoji": "<:willow_log:1189893791633653830>",
     "timeToComplete": 36000,
     "rewards": {
       "skillExperience": 35,
@@ -115,7 +115,7 @@
     "name": "mahogany_log",
     "label": "Mahogany Log",
     "minimumLevel": 70,
-    "emoji": "",
+    "emoji": "<:mahogany_log:1189893783538630686>",
     "timeToComplete": 40000,
     "rewards": {
       "skillExperience": 40,
@@ -131,7 +131,7 @@
     "name": "mystical_log",
     "label": "Mystical Log",
     "minimumLevel": 90,
-    "emoji": "",
+    "emoji": "<:mystical_log:1189893786961195018>",
     "timeToComplete": 45000,
     "rewards": {
       "skillExperience": 55,
