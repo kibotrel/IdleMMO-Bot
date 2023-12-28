@@ -1,3 +1,3 @@
-import { ping } from './ping.js'
+import type { InteractionHandler } from 'discordbox'
 
-export const interactions = [ping]
+export const interactions: InteractionHandler[] = []
