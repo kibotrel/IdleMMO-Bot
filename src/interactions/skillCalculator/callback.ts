@@ -63,11 +63,10 @@ const computeRankedTasks = (
         Constants.MillisecondsInHour / timeToCompleteWithBonuses,
       )
 
-      const experiencePerHour =
-        itemsPerHour *
-        Math.floor(
-          task.rewards.skillExperience * taskBonuses.bonusExperienceRatio,
-        )
+      const skillExperienceWithBonuses = Math.floor(
+        task.rewards.skillExperience * taskBonuses.bonusExperienceRatio,
+      )
+      const experiencePerHour = itemsPerHour * skillExperienceWithBonuses
 
       const goldCost = task.goldCost ?? 0
       const goldPerHour =
@@ -79,6 +78,11 @@ const computeRankedTasks = (
         ...task,
         experiencePerHour,
         goldPerHour,
+        rewards: {
+          ...task.rewards,
+          skillExperienceWithBonuses,
+        },
+        timeToCompleteWithBonuses,
       }
     })
     .sort((a, b) => {
@@ -117,11 +121,11 @@ const prepareDataForEmbed = (
   )
   const bestTask = rankedTasks.at(0) as SkillTaskYield
   const numberOfItemsNeeded = Math.ceil(
-    experienceToGain / bestTask.rewards.skillExperience,
+    experienceToGain / bestTask.rewards.skillExperienceWithBonuses,
   )
 
   embedData.timeToTargetLevel = millisecondsToTimeString(
-    numberOfItemsNeeded * bestTask.timeToComplete,
+    numberOfItemsNeeded * bestTask.timeToCompleteWithBonuses,
   )
 
   return embedData

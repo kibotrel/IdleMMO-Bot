@@ -17,9 +17,14 @@ export interface SkillTask {
   goldCost?: number
 }
 
+export interface SkillTaskRewardsYield extends SkillTaskRewards {
+  skillExperienceWithBonuses: number
+}
 export interface SkillTaskYield extends SkillTask {
   experiencePerHour: number
   goldPerHour: number
+  rewards: SkillTaskRewardsYield
+  timeToCompleteWithBonuses: number
 }
 
 export interface LevelInformation {
