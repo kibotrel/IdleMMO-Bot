@@ -4,6 +4,8 @@ import {
   InternalError,
   NotFoundError,
   UnprocessableContentError,
+  millisecondsToTimeString,
+  objectWithCamelCaseKeys,
 } from 'discordbox'
 
 import { Constants, ErrorMessages, ToolReductions } from '../../config/enums.js'
@@ -14,11 +16,7 @@ import type {
   SkillCalculatorTaskBonuses,
 } from '../../types/interactions.js'
 import type { SkillTask, SkillTaskYield } from '../../types/maps.js'
-import {
-  experienceBetweenLevels,
-  millisecondsToTimeString,
-} from '../../utils/maths.js'
-import { objectWithCamelCaseKeys } from '../../utils/objects.js'
+import { experienceBetweenLevels } from '../../utils/maths.js'
 
 import { skillCalculatorResultsEmbed } from './embed.js'
 
