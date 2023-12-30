@@ -57,7 +57,8 @@
     "prepublishOnly": "pm-exec run test && pm-exec run lint",
     "preversion": "pm-exec run lint",
     "test": "vitest",
-    "version": "pm-exec run format && git add -A src"
+    "version": "pm-exec run format && git add -A src",
+    "start": "node dist/src/index.js"
   },
   "type": "module",
   "types": "dist/src/index.d.ts",
