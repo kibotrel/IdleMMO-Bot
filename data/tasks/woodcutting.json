@@ -1,0 +1,146 @@
+[
+  {
+    "name": "oak_log",
+    "label": "Oak Log",
+    "minimumLevel": 1,
+    "emoji": "<:oak_log:1189893788542455888>",
+    "timeToComplete": 8000,
+    "rewards": {
+      "skillExperience": 3,
+      "vendorGold": 1,
+      "statisticExperiences": [
+        {
+          "strength": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "yew_log",
+    "label": "Yew Log",
+    "minimumLevel": 5,
+    "emoji": "<:yew_log:1189893792665448459>",
+    "timeToComplete": 12000,
+    "rewards": {
+      "skillExperience": 5,
+      "vendorGold": 2,
+      "statisticExperiences": [
+        {
+          "strength": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "spruce_log",
+    "label": "Spruce Log",
+    "minimumLevel": 10,
+    "emoji": "<:spruce_log:1189893790236950578>",
+    "timeToComplete": 15000,
+    "rewards": {
+      "skillExperience": 10,
+      "vendorGold": 3,
+      "statisticExperiences": [
+        {
+          "strength": 3
+        }
+      ]
+    }
+  },
+  {
+    "name": "birch_log",
+    "label": "Birch Log",
+    "minimumLevel": 15,
+    "emoji": "<:birch_log:1189893780501962802>",
+    "timeToComplete": 20000,
+    "rewards": {
+      "skillExperience": 15,
+      "vendorGold": 5,
+      "statisticExperiences": [
+        {
+          "strength": 5
+        }
+      ]
+    }
+  },
+  {
+    "name": "banyan_log",
+    "label": "Banyan Log",
+    "minimumLevel": 25,
+    "emoji": "<:banyan_log:1189893779226902608>",
+    "timeToComplete": 25000,
+    "rewards": {
+      "skillExperience": 21,
+      "vendorGold": 7,
+      "statisticExperiences": [
+        {
+          "strength": 7
+        }
+      ]
+    }
+  },
+  {
+    "name": "maple_log",
+    "label": "Maple Log",
+    "minimumLevel": 40,
+    "emoji": "<:maple_log:1189893785228947557>",
+    "timeToComplete": 31000,
+    "rewards": {
+      "skillExperience": 27,
+      "vendorGold": 9,
+      "statisticExperiences": [
+        {
+          "strength": 9
+        }
+      ]
+    }
+  },
+  {
+    "name": "willow_log",
+    "label": "Willow Log",
+    "minimumLevel": 60,
+    "emoji": "<:willow_log:1189893791633653830>",
+    "timeToComplete": 36000,
+    "rewards": {
+      "skillExperience": 35,
+      "vendorGold": 11,
+      "statisticExperiences": [
+        {
+          "strength": 11
+        }
+      ]
+    }
+  },
+  {
+    "name": "mahogany_log",
+    "label": "Mahogany Log",
+    "minimumLevel": 70,
+    "emoji": "<:mahogany_log:1189893783538630686>",
+    "timeToComplete": 40000,
+    "rewards": {
+      "skillExperience": 40,
+      "vendorGold": 13,
+      "statisticExperiences": [
+        {
+          "strength": 13
+        }
+      ]
+    }
+  },
+  {
+    "name": "mystical_log",
+    "label": "Mystical Log",
+    "minimumLevel": 90,
+    "emoji": "<:mystical_log:1189893786961195018>",
+    "timeToComplete": 45000,
+    "rewards": {
+      "skillExperience": 55,
+      "vendorGold": 15,
+      "statisticExperiences": [
+        {
+          "strength": 16
+        }
+      ]
+    }
+  }
+]

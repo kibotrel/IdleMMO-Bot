@@ -1,10 +1,11 @@
 import type { LogLevel } from 'discordbox'
 
 export interface Environment {
-  nodeEnv: string
-  discordBotToken: string
   discordBotClientId: string
   discordBotGuildId: string
   discordBotSupportUserId: string
+  discordBotToken: string
   logLevel: LogLevel
+  nodeEnv: string
+  version: string
 }

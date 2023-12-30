@@ -1,3 +1,5 @@
-import { ping } from './ping.js'
+import type { InteractionHandler } from 'discordbox'
 
-export const interactions = [ping]
+import { skillCalculator } from './skillCalculator/interaction.js'
+
+export const interactions: InteractionHandler[] = [skillCalculator]
