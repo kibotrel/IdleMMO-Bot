@@ -53,7 +53,7 @@
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint src/**/*.ts --config .eslintrc",
     "postversion": "git push && git push --tags",
-    "prepare": "pm-exec run build && pm-exec husky install",
+    "prepare": "pm-exec run build",
     "prepublishOnly": "pm-exec run test && pm-exec run lint",
     "preversion": "pm-exec run lint",
     "test": "vitest",
@@ -65,7 +65,6 @@
   "dependencies": {
     "discord.js": "14.14.1",
     "discordbox": "1.1.0",
-    "dotenv": "16.3.1",
-    "husky": "8.0.3"
+    "dotenv": "16.3.1"
   }
 }
