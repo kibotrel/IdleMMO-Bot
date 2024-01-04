@@ -48,19 +48,6 @@ export const enum StatisticNames {
   Strength = 'strength',
 }
 
-export const enum ToolReductions {
-  None = 0,
-  FivePercent = 0.05,
-  TenPercent = 0.1,
-  FifhteenPercent = 0.15,
-  TwentyPercent = 0.2,
-  TwentyFivePercent = 0.25,
-  ThirtyPercent = 0.3,
-  ThirtyFivePercent = 0.35,
-  FourtyPercent = 0.4,
-  FiftyPercent = 0.5,
-}
-
 export const enum Constants {
   BarteringRatePerLevel = 0.003,
   MembershipExperienceBonusRate = 0.15,

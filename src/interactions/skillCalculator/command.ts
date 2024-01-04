@@ -6,7 +6,6 @@ import {
   OptionDescriptions,
   OptionNames,
   SkillNames,
-  ToolReductions,
 } from '../../config/enums.js'
 
 export const skillCalculatorCommand = new SlashCommandBuilder()
@@ -43,16 +42,16 @@ export const skillCalculatorCommand = new SlashCommandBuilder()
       .setName(OptionNames.ToolBonus)
       .setDescription(OptionDescriptions.ToolBonus)
       .addChoices(
-        { name: 'None', value: ToolReductions.None },
-        { name: '5%', value: ToolReductions.FivePercent },
-        { name: '10%', value: ToolReductions.TenPercent },
-        { name: '15%', value: ToolReductions.FifhteenPercent },
-        { name: '20%', value: ToolReductions.TwentyPercent },
-        { name: '25%', value: ToolReductions.TwentyFivePercent },
-        { name: '30%', value: ToolReductions.ThirtyPercent },
-        { name: '35%', value: ToolReductions.ThirtyFivePercent },
-        { name: '40%', value: ToolReductions.FourtyPercent },
-        { name: '50%', value: ToolReductions.FiftyPercent },
+        { name: 'None', value: 0 },
+        { name: '5%', value: 0.05 },
+        { name: '10%', value: 0.1 },
+        { name: '15%', value: 0.15 },
+        { name: '20%', value: 0.2 },
+        { name: '25%', value: 0.25 },
+        { name: '30%', value: 0.3 },
+        { name: '35%', value: 0.35 },
+        { name: '40%', value: 0.4 },
+        { name: '50%', value: 0.5 },
       )
   })
   .addIntegerOption((option) => {

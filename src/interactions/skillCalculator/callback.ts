@@ -8,7 +8,7 @@ import {
   objectWithCamelCaseKeys,
 } from 'discordbox'
 
-import { Constants, ErrorMessages, ToolReductions } from '../../config/enums.js'
+import { Constants, ErrorMessages } from '../../config/enums.js'
 import { skillTasks } from '../../config/maps.js'
 import type { SkillCalculatorResultsEmbedData } from '../../types/embeds.js'
 import type {
@@ -104,7 +104,7 @@ const prepareDataForEmbed = (
       names: [],
     },
     timeToTargetLevel: '',
-    toolBonus: commandArguments.toolBonus ?? ToolReductions.None,
+    toolBonus: commandArguments.toolBonus ?? 0,
   }
 
   for (const task of rankedTasks) {
