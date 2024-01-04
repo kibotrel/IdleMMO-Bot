@@ -1,7 +1,7 @@
 {
-  "author": "",
-  "bugs": "",
-  "description": "",
+  "author": "@kibotrel",
+  "bugs": "https://github.com/kibotrel/IdleMMO-Bot/issues",
+  "description": "Discord bot to enhance the IdleMMO experience",
   "devDependencies": {
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
@@ -39,14 +39,14 @@
   "files": [
     "dist/**/*"
   ],
-  "homepage": "",
-  "license": "MIT",
+  "homepage": "https://github.com/kibotrel/IdleMMO-Bot",
+  "license": "Unlicense",
   "keywords": [],
   "main": "dist/src/index.js",
   "name": "placeholder",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/kibotrel/IdleMMO-Bot"
   },
   "scripts": {
     "build": "tsc",
