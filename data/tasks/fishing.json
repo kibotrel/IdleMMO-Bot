@@ -1,0 +1,223 @@
+[
+  {
+    "name": "cod",
+    "label": "Cod",
+    "minimumLevel": 1,
+    "emoji": "<:cod:1189855902275207258>",
+    "goldCost": 2,
+    "timeToComplete": 5000,
+    "rewards": {
+      "skillExperience": 2,
+      "vendorGold": 2,
+      "statisticExperiences": [
+        {
+          "dexterity": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "salmon",
+    "label": "Salmon",
+    "minimumLevel": 3,
+    "emoji": "<:salmon:1189855849330511903>",
+    "goldCost": 2,
+    "timeToComplete": 7000,
+    "rewards": {
+      "skillExperience": 4,
+      "vendorGold": 3,
+      "statisticExperiences": [
+        {
+          "dexterity": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "tuna",
+    "label": "Tuna",
+    "minimumLevel": 5,
+    "emoji": "<:tuna:1189855918876278816>",
+    "goldCost": 2,
+    "timeToComplete": 8000,
+    "rewards": {
+      "skillExperience": 6,
+      "vendorGold": 4,
+      "statisticExperiences": [
+        {
+          "dexterity": 3
+        }
+      ]
+    }
+  },
+  {
+    "name": "trout",
+    "label": "Trout",
+    "minimumLevel": 8,
+    "emoji": "<:trout:1189855846855868506>",
+    "goldCost": 4,
+    "timeToComplete": 12000,
+    "rewards": {
+      "skillExperience": 8,
+      "vendorGold": 5,
+      "statisticExperiences": [
+        {
+          "dexterity": 4
+        }
+      ]
+    }
+  },
+  {
+    "name": "perch",
+    "label": "Perch",
+    "minimumLevel": 11,
+    "emoji": "<:perch:1189855845098463312>",
+    "goldCost": 4,
+    "timeToComplete": 14000,
+    "rewards": {
+      "skillExperience": 10,
+      "vendorGold": 6,
+      "statisticExperiences": [
+        {
+          "dexterity": 5
+        }
+      ]
+    }
+  },
+  {
+    "name": "herring",
+    "label": "Herring",
+    "minimumLevel": 15,
+    "emoji": "<:herring:1189855843680788522>",
+    "goldCost": 7,
+    "timeToComplete": 18000,
+    "rewards": {
+      "skillExperience": 13,
+      "vendorGold": 7,
+      "statisticExperiences": [
+        {
+          "dexterity": 6
+        }
+      ]
+    }
+  },
+  {
+    "name": "sardines",
+    "label": "Sardines",
+    "minimumLevel": 25,
+    "emoji": "<:sardines:1189855842300870767>",
+    "goldCost": 7,
+    "timeToComplete": 21000,
+    "rewards": {
+      "skillExperience": 16,
+      "vendorGold": 8,
+      "statisticExperiences": [
+        {
+          "dexterity": 7
+        }
+      ]
+    }
+  },
+  {
+    "name": "lobster",
+    "label": "Lobster",
+    "minimumLevel": 30,
+    "emoji": "<:lobster:1189855839566180362>",
+    "goldCost": 12,
+    "timeToComplete": 24000,
+    "rewards": {
+      "skillExperience": 19,
+      "vendorGold": 14,
+      "statisticExperiences": [
+        {
+          "dexterity": 9
+        }
+      ]
+    }
+  },
+  {
+    "name": "crab",
+    "label": "Crab",
+    "minimumLevel": 40,
+    "emoji": "<:crab:1189855837708091413>",
+    "goldCost": 12,
+    "timeToComplete": 27000,
+    "rewards": {
+      "skillExperience": 22,
+      "vendorGold": 16,
+      "statisticExperiences": [
+        {
+          "dexterity": 10
+        }
+      ]
+    }
+  },
+  {
+    "name": "turtle",
+    "label": "Turtle",
+    "minimumLevel": 50,
+    "emoji": "<:turtle:1189855835850022953>",
+    "goldCost": 16,
+    "timeToComplete": 32000,
+    "rewards": {
+      "skillExperience": 27,
+      "vendorGold": 20,
+      "statisticExperiences": [
+        {
+          "dexterity": 11
+        }
+      ]
+    }
+  },
+  {
+    "name": "stingray",
+    "label": "Stingray",
+    "minimumLevel": 60,
+    "emoji": "<:stingray:1189855834491080715>",
+    "goldCost": 16,
+    "timeToComplete": 35000,
+    "rewards": {
+      "skillExperience": 35,
+      "vendorGold": 23,
+      "statisticExperiences": [
+        {
+          "dexterity": 12
+        }
+      ]
+    }
+  },
+  {
+    "name": "lantern_fish",
+    "label": "Lantern Fish",
+    "minimumLevel": 80,
+    "emoji": "<:lantern_fish:1189855833559928923>",
+    "goldCost": 25,
+    "timeToComplete": 38000,
+    "rewards": {
+      "skillExperience": 40,
+      "vendorGold": 35,
+      "statisticExperiences": [
+        {
+          "dexterity": 14
+        }
+      ]
+    }
+  },
+  {
+    "name": "great_white_shark",
+    "label": "Great White Shark",
+    "minimumLevel": 90,
+    "emoji": "<:great_white_shark:1189855830951067718>",
+    "goldCost": 25,
+    "timeToComplete": 41000,
+    "rewards": {
+      "skillExperience": 63,
+      "vendorGold": 45,
+      "statisticExperiences": [
+        {
+          "dexterity": 20
+        }
+      ]
+    }
+  }
+]

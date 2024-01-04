@@ -104,7 +104,7 @@
     "no-inline-comments": "error",
     "no-labels": "error",
     "no-lone-blocks": "error",
-    "no-mixed-operators": "error",
+    "no-mixed-operators": "off",
     "no-multi-assign": "error",
     "no-multi-str": "error",
     "no-nested-ternary": "error",
@@ -138,11 +138,6 @@
         "blankLine": "always",
         "prev": "*",
         "next": ["break", "continue", "return", "block-like"]
-      },
-      {
-        "blankLine": "never",
-        "prev": ["const", "let", "var"],
-        "next": ["const", "let", "var"]
       },
       {
         "blankLine": "always",
