@@ -5,7 +5,7 @@
   "devDependencies": {
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
-    "@types/node": "20.10.5",
+    "@types/node": "20.10.6",
     "@typescript-eslint/eslint-plugin": "6.14.0",
     "@typescript-eslint/parser": "6.14.0",
     "@vitest/coverage-v8": "1.0.4",
@@ -23,7 +23,7 @@
     "eslint-plugin-sonarjs": "0.23.0",
     "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-unicorn": "49.0.0",
-    "eslint-plugin-vitest": "0.3.17",
+    "eslint-plugin-vitest": "0.3.20",
     "husky": "8.0.3",
     "nodemon": "3.0.2",
     "pm-exec": "1.0.0",
