@@ -5,6 +5,7 @@ import {
   ActionNames,
   OptionDescriptions,
   OptionNames,
+  SkillCalculatorSortingStrategies,
   SkillNames,
 } from '../../config/enums.js'
 
@@ -72,4 +73,19 @@ export const skillCalculatorCommand = new SlashCommandBuilder()
     return option
       .setName(OptionNames.IsMembershipActive)
       .setDescription(OptionDescriptions.IsMembershipActive)
+  })
+  .addStringOption((option) => {
+    return option
+      .setName(OptionNames.SortingStrategy)
+      .setDescription(OptionDescriptions.SortingStrategy)
+      .addChoices(
+        {
+          name: 'Experience per hour',
+          value: SkillCalculatorSortingStrategies.ExperiencePerHour,
+        },
+        {
+          name: 'Gold per hour',
+          value: SkillCalculatorSortingStrategies.GoldPerHour,
+        },
+      )
   })

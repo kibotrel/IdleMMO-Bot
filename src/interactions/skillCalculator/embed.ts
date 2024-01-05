@@ -1,7 +1,37 @@
+import type { APIEmbedField } from 'discord.js'
 import { capitalizeString } from 'discordbox'
 
 import { baseEmded } from '../../config/embeds.js'
+import { SkillCalculatorSortingStrategies } from '../../config/enums.js'
 import type { SkillCalculatorResultsEmbedData } from '../../types/embeds.js'
+
+const strategyField = (
+  data: SkillCalculatorResultsEmbedData,
+): APIEmbedField => {
+  if (
+    data.sortingStrategy === SkillCalculatorSortingStrategies.ExperiencePerHour
+  ) {
+    return {
+      name: ':sparkles: XP/Hour',
+      value: data.tasks.experiencePerHour
+        .map((entry) => {
+          return entry.toLocaleString('en')
+        })
+        .join('\n'),
+      inline: true,
+    }
+  }
+
+  return {
+    name: ':coin: Gold/Hour',
+    value: data.tasks.goldPerHour
+      .map((entry) => {
+        return entry.toLocaleString('en')
+      })
+      .join('\n'),
+    inline: true,
+  }
+}
 
 export const skillCalculatorResultsEmbed = (
   data: SkillCalculatorResultsEmbedData,
@@ -29,23 +59,15 @@ export const skillCalculatorResultsEmbed = (
         inline: true,
       },
       {
-        name: ':sparkles: XP/Hour',
-        value: data.tasks.experiencePerHour
+        name: ':package: Items/Hour',
+        value: data.tasks.itemsPerHour
           .map((entry) => {
             return entry.toLocaleString('en')
           })
           .join('\n'),
         inline: true,
       },
-      {
-        name: ':coin: Gold/Hour',
-        value: data.tasks.goldPerHour
-          .map((entry) => {
-            return entry.toLocaleString('en')
-          })
-          .join('\n'),
-        inline: true,
-      },
+      strategyField(data),
       {
         name: ':tools: Tool bonus',
         value: `${(data.toolBonus * 100).toLocaleString('en')}%`,

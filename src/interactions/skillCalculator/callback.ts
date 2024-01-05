@@ -8,7 +8,11 @@ import {
   objectWithCamelCaseKeys,
 } from 'discordbox'
 
-import { Constants, ErrorMessages } from '../../config/enums.js'
+import {
+  Constants,
+  ErrorMessages,
+  SkillCalculatorSortingStrategies,
+} from '../../config/enums.js'
 import { skillTasks } from '../../config/maps.js'
 import type { SkillCalculatorResultsEmbedData } from '../../types/embeds.js'
 import type {
@@ -47,9 +51,25 @@ const computeTaskBonuses = (commandArguments: SkillCalculatorArguments) => {
 const computeRankedTasks = (
   tasks: SkillTask[],
   taskBonuses: SkillCalculatorTaskBonuses,
+  sortingStrategy: SkillCalculatorSortingStrategies,
 ): SkillTaskYield[] => {
+  const sortingStrategies = {
+    [SkillCalculatorSortingStrategies.ExperiencePerHour]: (
+      a: SkillTaskYield,
+      b: SkillTaskYield,
+    ) => {
+      return b.experiencePerHour - a.experiencePerHour
+    },
+    [SkillCalculatorSortingStrategies.GoldPerHour]: (
+      a: SkillTaskYield,
+      b: SkillTaskYield,
+    ) => {
+      return b.goldPerHour - a.goldPerHour
+    },
+  }
+
   return tasks
-    .map((task) => {
+    .map((task): SkillTaskYield => {
       /**
        * We divide by 2 because the percieved efficiency on the UI is doubled.
        * This is a hacky way to account for that.
@@ -76,6 +96,7 @@ const computeRankedTasks = (
         ...task,
         experiencePerHour,
         goldPerHour,
+        itemsPerHour,
         rewards: {
           ...task.rewards,
           skillExperienceWithBonuses,
@@ -84,24 +105,27 @@ const computeRankedTasks = (
       }
     })
     .sort((a, b) => {
-      return b.experiencePerHour - a.experiencePerHour
+      return sortingStrategies[sortingStrategy](a, b)
     })
 }
 
 const prepareDataForEmbed = (
   commandArguments: SkillCalculatorArguments,
   rankedTasks: SkillTaskYield[],
+  sortingStrategy: SkillCalculatorSortingStrategies,
 ) => {
   const embedData: SkillCalculatorResultsEmbedData = {
     barteringLevel: commandArguments.barteringLevel ?? 1,
     baseLevel: commandArguments.baseLevel,
     isMembershipActive: commandArguments.isMembershipActive ?? false,
     skillName: commandArguments.skillName,
+    sortingStrategy,
     targetLevel: commandArguments.targetLevel,
     tasks: {
       experiencePerHour: [],
       goldPerHour: [],
       names: [],
+      itemsPerHour: [],
     },
     timeToTargetLevel: '',
     toolBonus: commandArguments.toolBonus ?? 0,
@@ -111,6 +135,7 @@ const prepareDataForEmbed = (
     embedData.tasks.names.push(`${task.emoji} ${task.label}`)
     embedData.tasks.experiencePerHour.push(task.experiencePerHour)
     embedData.tasks.goldPerHour.push(task.goldPerHour)
+    embedData.tasks.itemsPerHour.push(task.itemsPerHour)
   }
 
   const experienceToGain = experienceBetweenLevels(
@@ -161,9 +186,22 @@ export const skillCalculatorCallback = async (
   const doableTasks = tasks.filter((task) => {
     return task.minimumLevel <= commandArguments.baseLevel
   })
+
   const taskBonuses = computeTaskBonuses(commandArguments)
-  const rankedTasks = computeRankedTasks(doableTasks, taskBonuses)
-  const embedData = prepareDataForEmbed(commandArguments, rankedTasks)
+  const sortingStrategy =
+    commandArguments.sortingStrategy ??
+    SkillCalculatorSortingStrategies.ExperiencePerHour
+
+  const rankedTasks = computeRankedTasks(
+    doableTasks,
+    taskBonuses,
+    sortingStrategy,
+  )
+  const embedData = prepareDataForEmbed(
+    commandArguments,
+    rankedTasks,
+    sortingStrategy,
+  )
 
   await interaction.reply({
     embeds: [skillCalculatorResultsEmbed(embedData)],

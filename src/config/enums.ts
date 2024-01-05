@@ -19,6 +19,7 @@ export const enum OptionDescriptions {
   BaseLevelRemainingExperience = 'Remaining experience to reach the next level.',
   IsMembershipActive = 'Whether or not you have an active membership.',
   SkillName = 'Skill you want compute for',
+  SortingStrategy = 'Strategy used to sort tasks.',
   TargetLevel = 'Level you want to reach.',
   ToolBonus = 'Bonus in percent granted by your currently equiped tool.',
 }
@@ -29,6 +30,7 @@ export const enum OptionNames {
   BaseLevelRemainingExperience = 'base_level_remaining_experience',
   IsMembershipActive = 'is_membership_active',
   SkillName = 'skill_name',
+  SortingStrategy = 'sorting_strategy',
   TargetLevel = 'target_level',
   ToolBonus = 'tool_bonus',
 }
@@ -41,6 +43,11 @@ export const enum SkillNames {
   Mining = 'mining',
   Smelting = 'smelting',
   Woodcutting = 'woodcutting',
+}
+
+export const enum SkillCalculatorSortingStrategies {
+  ExperiencePerHour = 'experience_per_hour',
+  GoldPerHour = 'gold_per_hour',
 }
 
 export const enum StatisticNames {

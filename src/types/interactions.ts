@@ -1,4 +1,7 @@
-import type { SkillNames } from '../config/enums.js'
+import type {
+  SkillCalculatorSortingStrategies,
+  SkillNames,
+} from '../config/enums.js'
 
 export interface SkillCalculatorArguments {
   barteringLevel: number
@@ -6,6 +9,7 @@ export interface SkillCalculatorArguments {
   baseLevelRemainingExperience: number
   isMembershipActive: boolean
   skillName: SkillNames
+  sortingStrategy: SkillCalculatorSortingStrategies
   targetLevel: number
   toolBonus: number
 }
