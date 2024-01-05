@@ -32,6 +32,13 @@ export const skillCalculatorCommand = new SlashCommandBuilder()
   })
   .addIntegerOption((option) => {
     return option
+      .setName(OptionNames.BaseLevelRemainingExperience)
+      .setDescription(OptionDescriptions.BaseLevelRemainingExperience)
+      .setMinValue(1)
+      .setMaxValue(1_643_765)
+  })
+  .addIntegerOption((option) => {
+    return option
       .setName(OptionNames.TargetLevel)
       .setDescription(OptionDescriptions.TargetLevel)
       .setMinValue(2)

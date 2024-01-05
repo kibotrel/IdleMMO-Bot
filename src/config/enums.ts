@@ -16,6 +16,7 @@ export const enum ErrorMessages {
 export const enum OptionDescriptions {
   BarteringLevel = "Level you're currently at in bartering.",
   BaseLevel = 'Level you are starting from.',
+  BaseLevelRemainingExperience = 'Remaining experience to reach the next level.',
   IsMembershipActive = 'Whether or not you have an active membership.',
   SkillName = 'Skill you want compute for',
   TargetLevel = 'Level you want to reach.',
@@ -25,6 +26,7 @@ export const enum OptionDescriptions {
 export const enum OptionNames {
   BarteringLevel = 'bartering_level',
   BaseLevel = 'base_level',
+  BaseLevelRemainingExperience = 'base_level_remaining_experience',
   IsMembershipActive = 'is_membership_active',
   SkillName = 'skill_name',
   TargetLevel = 'target_level',

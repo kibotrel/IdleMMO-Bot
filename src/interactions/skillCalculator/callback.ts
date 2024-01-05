@@ -116,6 +116,7 @@ const prepareDataForEmbed = (
   const experienceToGain = experienceBetweenLevels(
     commandArguments.baseLevel,
     commandArguments.targetLevel,
+    commandArguments.baseLevelRemainingExperience,
   )
   const bestTask = rankedTasks.at(0) as SkillTaskYield
   const numberOfItemsNeeded = Math.ceil(
