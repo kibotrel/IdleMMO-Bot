@@ -1,21 +1,26 @@
+import essenceTiers from '../../data/essences.json' assert { type: 'json' }
 import experienceLevels from '../../data/levels.json' assert { type: 'json' }
 import fishingTasks from '../../data/tasks/fishing.json' assert { type: 'json' }
 import miningTasks from '../../data/tasks/mining.json' assert { type: 'json' }
 import woodcuttingTasks from '../../data/tasks/woodcutting.json' assert { type: 'json' }
 import type {
+  BonusEssence,
   LevelInformation,
-  LevelsMap,
-  SkillTasksMap,
+  SkillTask,
 } from '../types/maps.js'
 
 import { SkillNames } from './enums.js'
 
-export const skillTasks: SkillTasksMap = new Map()
+export const skillTasks = new Map<SkillNames, SkillTask[]>([
+  [SkillNames.Fishing, fishingTasks],
+  [SkillNames.Mining, miningTasks],
+  [SkillNames.Woodcutting, woodcuttingTasks],
+])
 
-skillTasks.set(SkillNames.Woodcutting, woodcuttingTasks)
-skillTasks.set(SkillNames.Mining, miningTasks)
-skillTasks.set(SkillNames.Fishing, fishingTasks)
-
-export const levels: LevelsMap = new Map(
+export const levels = new Map<number, LevelInformation>(
   experienceLevels as Array<[number, LevelInformation]>,
+)
+
+export const bonusEssences = new Map<number, BonusEssence>(
+  essenceTiers as Array<[number, BonusEssence]>,
 )

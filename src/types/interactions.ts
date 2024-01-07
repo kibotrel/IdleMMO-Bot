@@ -7,6 +7,7 @@ export interface SkillCalculatorArguments {
   barteringLevel: number
   baseLevel: number
   baseLevelRemainingExperience: number
+  bonusEssence: number
   isMembershipActive: boolean
   skillName: SkillNames
   sortingStrategy: SkillCalculatorSortingStrategies

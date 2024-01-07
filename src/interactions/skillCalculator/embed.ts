@@ -3,6 +3,7 @@ import { capitalizeString } from 'discordbox'
 
 import { baseEmded } from '../../config/embeds.js'
 import { SkillCalculatorSortingStrategies } from '../../config/enums.js'
+import { bonusEssences } from '../../config/maps.js'
 import type { SkillCalculatorResultsEmbedData } from '../../types/embeds.js'
 import { emptyField } from '../../utils/embeds.js'
 
@@ -48,7 +49,7 @@ const barteringLevelField = (
   data: SkillCalculatorResultsEmbedData,
 ): APIEmbedField => {
   return {
-    name: ':scales: Bartering level',
+    name: '<:bartering:1193613627060670584> Bartering level',
     value: data.barteringLevel.toLocaleString('en'),
     inline: true,
   }
@@ -67,9 +68,11 @@ const taskNamesField = (
 const toolBonusField = (
   data: SkillCalculatorResultsEmbedData,
 ): APIEmbedField => {
+  const toolBonus = data.toolBonus * 100
+
   return {
     name: ':tools: Tool bonus',
-    value: `${(data.toolBonus * 100).toLocaleString('en')}%`,
+    value: toolBonus ? `${toolBonus.toLocaleString('en')}%` : 'None',
     inline: true,
   }
 }
@@ -78,7 +81,7 @@ const membershipField = (
   data: SkillCalculatorResultsEmbedData,
 ): APIEmbedField => {
   return {
-    name: ':crown: Membership',
+    name: '<:membership:1193614365396574269> Membership',
     value: data.isMembershipActive ? 'Active' : 'Inactive',
     inline: true,
   }
@@ -94,6 +97,18 @@ const itemYieldField = (
         return entry.toLocaleString('en')
       })
       .join('\n'),
+    inline: true,
+  }
+}
+
+const essenceBonusField = (
+  data: SkillCalculatorResultsEmbedData,
+): APIEmbedField => {
+  const essenceBonus = bonusEssences.get(data.bonusEssence)
+
+  return {
+    name: '<:essence_crystal:1193612328613191821> Essence bonus',
+    value: essenceBonus ? `Tier ${data.bonusEssence}` : 'None',
     inline: true,
   }
 }
@@ -114,7 +129,7 @@ export const skillCalculatorResultsEmbed = (
       itemYieldField(data),
       strategyField(data),
       toolBonusField(data),
+      essenceBonusField(data),
       membershipField(data),
-      emptyField(),
     ])
 }

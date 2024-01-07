@@ -13,7 +13,7 @@ import {
   ErrorMessages,
   SkillCalculatorSortingStrategies,
 } from '../../config/enums.js'
-import { skillTasks } from '../../config/maps.js'
+import { bonusEssences, skillTasks } from '../../config/maps.js'
 import type { SkillCalculatorResultsEmbedData } from '../../types/embeds.js'
 import type {
   SkillCalculatorArguments,
@@ -43,6 +43,15 @@ const computeTaskBonuses = (commandArguments: SkillCalculatorArguments) => {
   if (commandArguments.isMembershipActive) {
     taskBonuses.bonusExperienceRatio += Constants.MembershipExperienceBonusRate
     taskBonuses.reductionTimeRatio += Constants.MembershipTimeRedictionRate
+  }
+
+  if (commandArguments.bonusEssence) {
+    const bonusEssence = bonusEssences.get(commandArguments.bonusEssence)
+
+    if (bonusEssence) {
+      taskBonuses.bonusExperienceRatio += bonusEssence.experience
+      taskBonuses.reductionTimeRatio += bonusEssence.efficiency
+    }
   }
 
   return taskBonuses
@@ -117,6 +126,7 @@ const prepareDataForEmbed = (
   const embedData: SkillCalculatorResultsEmbedData = {
     barteringLevel: commandArguments.barteringLevel ?? 1,
     baseLevel: commandArguments.baseLevel,
+    bonusEssence: commandArguments.bonusEssence ?? 0,
     isMembershipActive: commandArguments.isMembershipActive ?? false,
     skillName: commandArguments.skillName,
     sortingStrategy,

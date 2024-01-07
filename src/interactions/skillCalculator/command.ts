@@ -62,6 +62,17 @@ export const skillCalculatorCommand = new SlashCommandBuilder()
         { name: '50%', value: 0.5 },
       )
   })
+  .addNumberOption((option) => {
+    return option
+      .setName(OptionNames.BonusEssence)
+      .setDescription(OptionDescriptions.BonusEssence)
+      .addChoices(
+        { name: 'None', value: 0 },
+        { name: 'Tier 1 (5% Efficiency / 10% Experience)', value: 1 },
+        { name: 'Tier 2 (10% Efficiency / 20% Experience)', value: 2 },
+        { name: 'Tier 3 (25% Efficiency / 35% Experience)', value: 3 },
+      )
+  })
   .addIntegerOption((option) => {
     return option
       .setName(OptionNames.BarteringLevel)

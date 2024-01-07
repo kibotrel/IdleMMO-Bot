@@ -1,4 +1,4 @@
-import type { SkillNames, StatisticNames } from '../config/enums.js'
+import type { StatisticNames } from '../config/enums.js'
 
 export interface SkillTaskRewards {
   skillExperience: number
@@ -33,6 +33,7 @@ export interface LevelInformation {
   sumPreviousLevelsExperience: number
 }
 
-export type SkillTasksMap = Map<SkillNames, SkillTask[]>
-
-export type LevelsMap = Map<number, LevelInformation>
+export interface BonusEssence {
+  efficiency: number
+  experience: number
+}

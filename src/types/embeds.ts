@@ -6,6 +6,7 @@ import type {
 export interface SkillCalculatorResultsEmbedData {
   barteringLevel: number
   baseLevel: number
+  bonusEssence: number
   isMembershipActive: boolean
   skillName: SkillNames
   sortingStrategy: SkillCalculatorSortingStrategies
