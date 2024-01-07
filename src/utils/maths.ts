@@ -6,6 +6,7 @@ import { levels } from '../config/maps.js'
 export const experienceBetweenLevels = (
   baseLevel: number,
   targetLevel: number,
+  baseLevelRemainingExperience: number,
 ) => {
   if (!baseLevel || !targetLevel || baseLevel >= targetLevel) {
     throw new UnprocessableContentError(
@@ -20,7 +21,15 @@ export const experienceBetweenLevels = (
     throw new InternalError(ErrorMessages.LevelInformationNotFound)
   }
 
-  return (
+  const totalExperience =
     toLevel.sumPreviousLevelsExperience - fromLevel.sumPreviousLevelsExperience
-  )
+
+  if (!baseLevelRemainingExperience) {
+    return totalExperience
+  }
+
+  const baseLevelCollectedExperience =
+    fromLevel.levelExperience - baseLevelRemainingExperience
+
+  return totalExperience - baseLevelCollectedExperience
 }

@@ -16,8 +16,11 @@ export const enum ErrorMessages {
 export const enum OptionDescriptions {
   BarteringLevel = "Level you're currently at in bartering.",
   BaseLevel = 'Level you are starting from.',
+  BaseLevelRemainingExperience = 'Remaining experience to reach the next level.',
+  BonusEssence = 'Additional essence you want to use.',
   IsMembershipActive = 'Whether or not you have an active membership.',
   SkillName = 'Skill you want compute for',
+  SortingStrategy = 'Strategy used to sort tasks.',
   TargetLevel = 'Level you want to reach.',
   ToolBonus = 'Bonus in percent granted by your currently equiped tool.',
 }
@@ -25,8 +28,11 @@ export const enum OptionDescriptions {
 export const enum OptionNames {
   BarteringLevel = 'bartering_level',
   BaseLevel = 'base_level',
+  BaseLevelRemainingExperience = 'base_level_remaining_experience',
+  BonusEssence = 'bonus_essence',
   IsMembershipActive = 'is_membership_active',
   SkillName = 'skill_name',
+  SortingStrategy = 'sorting_strategy',
   TargetLevel = 'target_level',
   ToolBonus = 'tool_bonus',
 }
@@ -41,24 +47,16 @@ export const enum SkillNames {
   Woodcutting = 'woodcutting',
 }
 
+export const enum SkillCalculatorSortingStrategies {
+  ExperiencePerHour = 'experience_per_hour',
+  GoldPerHour = 'gold_per_hour',
+}
+
 export const enum StatisticNames {
   Defence = 'defence',
   Dexterity = 'dexterity',
   Speed = 'speed',
   Strength = 'strength',
-}
-
-export const enum ToolReductions {
-  None = 0,
-  FivePercent = 0.05,
-  TenPercent = 0.1,
-  FifhteenPercent = 0.15,
-  TwentyPercent = 0.2,
-  TwentyFivePercent = 0.25,
-  ThirtyPercent = 0.3,
-  ThirtyFivePercent = 0.35,
-  FourtyPercent = 0.4,
-  FiftyPercent = 0.5,
 }
 
 export const enum Constants {
