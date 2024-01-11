@@ -79,12 +79,8 @@ const computeRankedTasks = (
 
   return tasks
     .map((task): SkillTaskYield => {
-      /**
-       * We divide by 2 because the percieved efficiency on the UI is doubled.
-       * This is a hacky way to account for that.
-       */
       const timeToCompleteWithBonuses =
-        task.timeToComplete * (1 - taskBonuses.reductionTimeRatio / 2)
+        task.timeToComplete / (1 + taskBonuses.reductionTimeRatio)
 
       const itemsPerHour = Math.floor(
         Constants.MillisecondsInHour / timeToCompleteWithBonuses,
