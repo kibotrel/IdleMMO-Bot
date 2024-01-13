@@ -91,12 +91,28 @@ export const skillCalculatorCommand = new SlashCommandBuilder()
       .setDescription(OptionDescriptions.SortingStrategy)
       .addChoices(
         {
-          name: 'Experience per hour',
-          value: SkillCalculatorSortingStrategies.ExperiencePerHour,
+          name: 'Defence experience',
+          value: SkillCalculatorSortingStrategies.DefenceExperiencePerHour,
         },
         {
-          name: 'Gold per hour',
+          name: 'Dexterity experience',
+          value: SkillCalculatorSortingStrategies.DexterityExperiencePerHour,
+        },
+        {
+          name: 'Skill experience',
+          value: SkillCalculatorSortingStrategies.SkillExperiencePerHour,
+        },
+        {
+          name: 'Gold',
           value: SkillCalculatorSortingStrategies.GoldPerHour,
+        },
+        {
+          name: 'Speed experience',
+          value: SkillCalculatorSortingStrategies.SpeedExperiencePerHour,
+        },
+        {
+          name: 'Strength experience',
+          value: SkillCalculatorSortingStrategies.StrengthExperiencePerHour,
         },
       )
   })

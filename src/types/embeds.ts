@@ -12,10 +12,14 @@ export interface SkillCalculatorResultsEmbedData {
   sortingStrategy: SkillCalculatorSortingStrategies
   targetLevel: number
   tasks: {
-    experiencePerHour: number[]
+    defenceExperiencePerHour: number[]
+    dexterityExperiencePerHour: number[]
     goldPerHour: number[]
     itemsPerHour: number[]
+    skillExperiencePerHour: number[]
     names: string[]
+    speedExperiencePerHour: number[]
+    strengthExperiencePerHour: number[]
   }
   timeToTargetLevel: string
   toolBonus: number

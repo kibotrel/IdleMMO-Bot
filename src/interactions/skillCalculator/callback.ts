@@ -19,8 +19,14 @@ import type {
   SkillCalculatorArguments,
   SkillCalculatorTaskBonuses,
 } from '../../types/interactions.js'
-import type { SkillTask, SkillTaskYield } from '../../types/maps.js'
+import type {
+  SkillTask,
+  SkillTaskRewards,
+  SkillTaskRewardsYield,
+  SkillTaskYield,
+} from '../../types/maps.js'
 import { experienceBetweenLevels } from '../../utils/maths.js'
+import { snakeCaseToCamelCaseString } from '../../utils/strings.js'
 
 import { skillCalculatorResultsEmbed } from './embed.js'
 
@@ -62,59 +68,60 @@ const computeRankedTasks = (
   taskBonuses: SkillCalculatorTaskBonuses,
   sortingStrategy: SkillCalculatorSortingStrategies,
 ): SkillTaskYield[] => {
-  const sortingStrategies = {
-    [SkillCalculatorSortingStrategies.ExperiencePerHour]: (
-      a: SkillTaskYield,
-      b: SkillTaskYield,
-    ) => {
-      return b.experiencePerHour - a.experiencePerHour
-    },
-    [SkillCalculatorSortingStrategies.GoldPerHour]: (
-      a: SkillTaskYield,
-      b: SkillTaskYield,
-    ) => {
-      return b.goldPerHour - a.goldPerHour
-    },
-  }
+  const sortingKey =
+    snakeCaseToCamelCaseString<
+      Exclude<
+        keyof SkillTaskRewardsYield,
+        keyof SkillTaskRewards | 'itemsPerHour'
+      >
+    >(sortingStrategy)
 
   return tasks
     .map((task): SkillTaskYield => {
-      /**
-       * We divide by 2 because the percieved efficiency on the UI is doubled.
-       * This is a hacky way to account for that.
-       */
       const timeToCompleteWithBonuses =
-        task.timeToComplete * (1 - taskBonuses.reductionTimeRatio / 2)
+        task.timeToComplete / (1 + taskBonuses.reductionTimeRatio)
+      const skillExperienceWithBonuses = Math.floor(
+        task.rewards.skillExperience * taskBonuses.bonusExperienceRatio,
+      )
+
+      const goldCost = task.goldCost ?? 0
 
       const itemsPerHour = Math.floor(
         Constants.MillisecondsInHour / timeToCompleteWithBonuses,
       )
-
-      const skillExperienceWithBonuses = Math.floor(
-        task.rewards.skillExperience * taskBonuses.bonusExperienceRatio,
-      )
-      const experiencePerHour = itemsPerHour * skillExperienceWithBonuses
-
-      const goldCost = task.goldCost ?? 0
+      const skillExperiencePerHour = itemsPerHour * skillExperienceWithBonuses
       const goldPerHour =
         itemsPerHour *
         (Math.round(task.rewards.vendorGold * taskBonuses.barteringRatio) -
           goldCost)
 
+      const defenceExperiencePerHour =
+        itemsPerHour * (task.rewards.statisticExperiences.defence ?? 0)
+      const dexterityExperiencePerHour =
+        itemsPerHour * (task.rewards.statisticExperiences.dexterity ?? 0)
+      const strengthExperiencePerHour =
+        itemsPerHour * (task.rewards.statisticExperiences.strength ?? 0)
+      const speedExperiencePerHour =
+        itemsPerHour * (task.rewards.statisticExperiences.speed ?? 0)
+
       return {
         ...task,
-        experiencePerHour,
-        goldPerHour,
-        itemsPerHour,
         rewards: {
           ...task.rewards,
-          skillExperienceWithBonuses,
+          defenceExperiencePerHour,
+          dexterityExperiencePerHour,
+          goldPerHour,
+          itemsPerHour,
+          skillExperiencePerHour,
+          speedExperiencePerHour,
+          strengthExperiencePerHour,
         },
+        skillExperienceWithBonuses,
         timeToCompleteWithBonuses,
       }
     })
     .sort((a, b) => {
-      return sortingStrategies[sortingStrategy](a, b)
+      return b.rewards[sortingKey] - a.rewards[sortingKey]
     })
 }
 
@@ -132,20 +139,38 @@ const prepareDataForEmbed = (
     sortingStrategy,
     targetLevel: commandArguments.targetLevel,
     tasks: {
-      experiencePerHour: [],
+      defenceExperiencePerHour: [],
+      dexterityExperiencePerHour: [],
       goldPerHour: [],
       names: [],
       itemsPerHour: [],
+      skillExperiencePerHour: [],
+      speedExperiencePerHour: [],
+      strengthExperiencePerHour: [],
     },
     timeToTargetLevel: '',
     toolBonus: commandArguments.toolBonus ?? 0,
   }
 
   for (const task of rankedTasks) {
+    embedData.tasks.defenceExperiencePerHour.push(
+      task.rewards.defenceExperiencePerHour,
+    )
+    embedData.tasks.dexterityExperiencePerHour.push(
+      task.rewards.dexterityExperiencePerHour,
+    )
+    embedData.tasks.skillExperiencePerHour.push(
+      task.rewards.skillExperiencePerHour,
+    )
+    embedData.tasks.goldPerHour.push(task.rewards.goldPerHour)
+    embedData.tasks.itemsPerHour.push(task.rewards.itemsPerHour)
     embedData.tasks.names.push(`${task.emoji} ${task.label}`)
-    embedData.tasks.experiencePerHour.push(task.experiencePerHour)
-    embedData.tasks.goldPerHour.push(task.goldPerHour)
-    embedData.tasks.itemsPerHour.push(task.itemsPerHour)
+    embedData.tasks.speedExperiencePerHour.push(
+      task.rewards.speedExperiencePerHour,
+    )
+    embedData.tasks.strengthExperiencePerHour.push(
+      task.rewards.strengthExperiencePerHour,
+    )
   }
 
   const experienceToGain = experienceBetweenLevels(
@@ -153,9 +178,14 @@ const prepareDataForEmbed = (
     commandArguments.targetLevel,
     commandArguments.baseLevelRemainingExperience,
   )
-  const bestTask = rankedTasks.at(0) as SkillTaskYield
+  const bestTask = rankedTasks.at(0)
+
+  if (!bestTask) {
+    throw new InternalError(ErrorMessages.SkillCalculatorNoOutputTaskAvailable)
+  }
+
   const numberOfItemsNeeded = Math.ceil(
-    experienceToGain / bestTask.rewards.skillExperienceWithBonuses,
+    experienceToGain / bestTask.skillExperienceWithBonuses,
   )
 
   embedData.timeToTargetLevel = millisecondsToTimeString(
@@ -200,7 +230,7 @@ export const skillCalculatorCallback = async (
   const taskBonuses = computeTaskBonuses(commandArguments)
   const sortingStrategy =
     commandArguments.sortingStrategy ??
-    SkillCalculatorSortingStrategies.ExperiencePerHour
+    SkillCalculatorSortingStrategies.SkillExperiencePerHour
 
   const rankedTasks = computeRankedTasks(
     doableTasks,

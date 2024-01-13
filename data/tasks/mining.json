@@ -8,12 +8,10 @@
     "rewards": {
       "skillExperience": 3,
       "vendorGold": 1,
-      "statisticExperiences": [
-        {
-          "strength": 1,
-          "defense": 1
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 1,
+        "defence": 1
+      }
     }
   },
   {
@@ -25,12 +23,10 @@
     "rewards": {
       "skillExperience": 3,
       "vendorGold": 1,
-      "statisticExperiences": [
-        {
-          "strength": 1,
-          "defense": 1
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 1,
+        "defence": 1
+      }
     }
   },
   {
@@ -42,12 +38,10 @@
     "rewards": {
       "skillExperience": 5,
       "vendorGold": 2,
-      "statisticExperiences": [
-        {
-          "strength": 1,
-          "defense": 2
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 1,
+        "defence": 2
+      }
     }
   },
   {
@@ -59,12 +53,10 @@
     "rewards": {
       "skillExperience": 10,
       "vendorGold": 3,
-      "statisticExperiences": [
-        {
-          "strength": 2,
-          "defense": 3
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 2,
+        "defence": 3
+      }
     }
   },
   {
@@ -76,12 +68,10 @@
     "rewards": {
       "skillExperience": 15,
       "vendorGold": 5,
-      "statisticExperiences": [
-        {
-          "strength": 3,
-          "defense": 5
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 3,
+        "defence": 5
+      }
     }
   },
   {
@@ -93,12 +83,10 @@
     "rewards": {
       "skillExperience": 21,
       "vendorGold": 7,
-      "statisticExperiences": [
-        {
-          "strength": 3,
-          "defense": 7
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 3,
+        "defence": 7
+      }
     }
   },
   {
@@ -110,12 +98,10 @@
     "rewards": {
       "skillExperience": 27,
       "vendorGold": 9,
-      "statisticExperiences": [
-        {
-          "strength": 4,
-          "defense": 9
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 4,
+        "defence": 9
+      }
     }
   },
   {
@@ -127,29 +113,25 @@
     "rewards": {
       "skillExperience": 35,
       "vendorGold": 11,
-      "statisticExperiences": [
-        {
-          "strength": 5,
-          "defense": 11
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 5,
+        "defence": 11
+      }
     }
   },
   {
     "name": "uranium_ore",
     "label": "Uranium Ore",
     "minimumLevel": 70,
-    "emoji": "<:uranium_ore:1189890126957006949>",
+    "emoji": "<:uranium_ore:1195756076331712512>",
     "timeToComplete": 40000,
     "rewards": {
       "skillExperience": 40,
       "vendorGold": 13,
-      "statisticExperiences": [
-        {
-          "strength": 6,
-          "defense": 13
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 6,
+        "defence": 13
+      }
     }
   },
   {
@@ -161,12 +143,10 @@
     "rewards": {
       "skillExperience": 55,
       "vendorGold": 15,
-      "statisticExperiences": [
-        {
-          "strength": 7,
-          "defense": 16
-        }
-      ]
+      "statisticExperiences": {
+        "strength": 7,
+        "defence": 16
+      }
     }
   }
 ]
