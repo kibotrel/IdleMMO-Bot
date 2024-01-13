@@ -9,11 +9,9 @@
     "rewards": {
       "skillExperience": 2,
       "vendorGold": 2,
-      "statisticExperiences": [
-        {
-          "dexterity": 1
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 1
+      }
     }
   },
   {
@@ -26,11 +24,9 @@
     "rewards": {
       "skillExperience": 4,
       "vendorGold": 3,
-      "statisticExperiences": [
-        {
-          "dexterity": 2
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 2
+      }
     }
   },
   {
@@ -43,11 +39,9 @@
     "rewards": {
       "skillExperience": 6,
       "vendorGold": 4,
-      "statisticExperiences": [
-        {
-          "dexterity": 3
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 3
+      }
     }
   },
   {
@@ -60,11 +54,9 @@
     "rewards": {
       "skillExperience": 8,
       "vendorGold": 5,
-      "statisticExperiences": [
-        {
-          "dexterity": 4
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 4
+      }
     }
   },
   {
@@ -77,11 +69,9 @@
     "rewards": {
       "skillExperience": 10,
       "vendorGold": 6,
-      "statisticExperiences": [
-        {
-          "dexterity": 5
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 5
+      }
     }
   },
   {
@@ -94,11 +84,9 @@
     "rewards": {
       "skillExperience": 13,
       "vendorGold": 7,
-      "statisticExperiences": [
-        {
-          "dexterity": 6
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 6
+      }
     }
   },
   {
@@ -111,11 +99,9 @@
     "rewards": {
       "skillExperience": 16,
       "vendorGold": 8,
-      "statisticExperiences": [
-        {
-          "dexterity": 7
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 7
+      }
     }
   },
   {
@@ -128,11 +114,9 @@
     "rewards": {
       "skillExperience": 19,
       "vendorGold": 14,
-      "statisticExperiences": [
-        {
-          "dexterity": 9
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 9
+      }
     }
   },
   {
@@ -145,11 +129,9 @@
     "rewards": {
       "skillExperience": 22,
       "vendorGold": 16,
-      "statisticExperiences": [
-        {
-          "dexterity": 10
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 10
+      }
     }
   },
   {
@@ -162,11 +144,9 @@
     "rewards": {
       "skillExperience": 27,
       "vendorGold": 20,
-      "statisticExperiences": [
-        {
-          "dexterity": 11
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 11
+      }
     }
   },
   {
@@ -179,11 +159,9 @@
     "rewards": {
       "skillExperience": 35,
       "vendorGold": 23,
-      "statisticExperiences": [
-        {
-          "dexterity": 12
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 12
+      }
     }
   },
   {
@@ -196,11 +174,9 @@
     "rewards": {
       "skillExperience": 40,
       "vendorGold": 35,
-      "statisticExperiences": [
-        {
-          "dexterity": 14
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 14
+      }
     }
   },
   {
@@ -213,11 +189,9 @@
     "rewards": {
       "skillExperience": 63,
       "vendorGold": 45,
-      "statisticExperiences": [
-        {
-          "dexterity": 20
-        }
-      ]
+      "statisticExperiences": {
+        "dexterity": 20
+      }
     }
   }
 ]

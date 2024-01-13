@@ -9,6 +9,7 @@ export const enum ActionNames {
 export const enum ErrorMessages {
   LevelInformationNotFound = 'Level information could not be found.',
   SkillCalulatorIncoherentLevels = 'Target level must be higher than the base level.',
+  SkillCalculatorNoOutputTaskAvailable = 'No output task available.',
   SkillCalculatorSkillNotYetImplemented = 'Skill is not yet implemented.',
   SlashCommandArgumentsMalformed = 'Slash command arguments are malformed.',
 }
@@ -48,8 +49,12 @@ export const enum SkillNames {
 }
 
 export const enum SkillCalculatorSortingStrategies {
-  ExperiencePerHour = 'experience_per_hour',
+  DefenceExperiencePerHour = 'defence_experience_per_hour',
+  DexterityExperiencePerHour = 'dexterity_experience_per_hour',
   GoldPerHour = 'gold_per_hour',
+  SkillExperiencePerHour = 'skill_experience_per_hour',
+  SpeedExperiencePerHour = 'speed_experience_per_hour',
+  StrengthExperiencePerHour = 'strength_experience_per_hour',
 }
 
 export const enum StatisticNames {
