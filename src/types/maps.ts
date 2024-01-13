@@ -2,7 +2,7 @@ import type { StatisticNames } from '../config/enums.js'
 
 export interface SkillTaskRewards {
   skillExperience: number
-  statisticExperiences: Array<Partial<Record<StatisticNames, number>>>
+  statisticExperiences: { [key in StatisticNames]?: number }
   vendorGold: number
 }
 
