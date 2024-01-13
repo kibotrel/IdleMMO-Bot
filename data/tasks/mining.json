@@ -139,7 +139,7 @@
     "name": "uranium_ore",
     "label": "Uranium Ore",
     "minimumLevel": 70,
-    "emoji": "<:uranium_ore:1189890126957006949>",
+    "emoji": "<:uranium_ore:1195756076331712512>",
     "timeToComplete": 40000,
     "rewards": {
       "skillExperience": 40,
