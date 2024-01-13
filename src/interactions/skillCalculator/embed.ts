@@ -6,27 +6,35 @@ import { SkillCalculatorSortingStrategies } from '../../config/enums.js'
 import { bonusEssences } from '../../config/maps.js'
 import type { SkillCalculatorResultsEmbedData } from '../../types/embeds.js'
 import { emptyField } from '../../utils/embeds.js'
+import { snakeCaseToCamelCaseString } from '../../utils/strings.js'
 
 const strategyField = (
   data: SkillCalculatorResultsEmbedData,
 ): APIEmbedField => {
-  if (
-    data.sortingStrategy === SkillCalculatorSortingStrategies.ExperiencePerHour
-  ) {
-    return {
-      name: ':sparkles: XP/Hour',
-      value: data.tasks.experiencePerHour
-        .map((entry) => {
-          return entry.toLocaleString('en')
-        })
-        .join('\n'),
-      inline: true,
-    }
+  const sortingKey = snakeCaseToCamelCaseString<
+    Exclude<
+      keyof SkillCalculatorResultsEmbedData['tasks'],
+      'names' | 'itemsPerHour'
+    >
+  >(data.sortingStrategy)
+
+  const fieldNames = {
+    [SkillCalculatorSortingStrategies.DefenceExperiencePerHour]:
+      '<:defence:1195777361673715773> Defence XP/Hour',
+    [SkillCalculatorSortingStrategies.DexterityExperiencePerHour]:
+      '<:dexterity:1195777350407827527> Dexterity XP/Hour',
+    [SkillCalculatorSortingStrategies.GoldPerHour]: ':coin: Gold/Hour',
+    [SkillCalculatorSortingStrategies.SkillExperiencePerHour]:
+      ':sparkles: Skill XP/Hour',
+    [SkillCalculatorSortingStrategies.SpeedExperiencePerHour]:
+      '<:speed:1195777352299466763> Speed XP/Hour',
+    [SkillCalculatorSortingStrategies.StrengthExperiencePerHour]:
+      '<:strength:1195777362906857604> Strength XP/Hour',
   }
 
   return {
-    name: ':coin: Gold/Hour',
-    value: data.tasks.goldPerHour
+    name: fieldNames[data.sortingStrategy],
+    value: data.tasks[sortingKey]
       .map((entry) => {
         return entry.toLocaleString('en')
       })
@@ -119,7 +127,7 @@ export const skillCalculatorResultsEmbed = (
   return baseEmded()
     .setTitle(`Skill Calculator | ${capitalizeString(data.skillName)}`)
     .setDescription(
-      `Tasks are sorted by **XP/hour** rate in descending order. Time is computed assuming you run the most efficient task for the whole duration.\n\u200B`,
+      `Time is computed assuming you run the most efficient task based on the sorting strategy you've selected for the whole duration.\n\u200B`,
     )
     .setFields([
       timeEstimateField(data),

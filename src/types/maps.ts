@@ -18,12 +18,16 @@ export interface SkillTask {
 }
 
 export interface SkillTaskRewardsYield extends SkillTaskRewards {
-  skillExperienceWithBonuses: number
-}
-export interface SkillTaskYield extends SkillTask {
-  experiencePerHour: number
+  defenceExperiencePerHour: number
+  dexterityExperiencePerHour: number
   goldPerHour: number
   itemsPerHour: number
+  skillExperiencePerHour: number
+  speedExperiencePerHour: number
+  strengthExperiencePerHour: number
+}
+export interface SkillTaskYield extends SkillTask {
+  skillExperienceWithBonuses: number
   rewards: SkillTaskRewardsYield
   timeToCompleteWithBonuses: number
 }
